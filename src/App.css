@@ -1,16 +1,68 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 15%;
 }
 
-
-body {
+html,body {
   background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
+
+.trans-color {
+  transition: 750ms linear;
+  transition-property: all;
+}
+
+
+
 
 .quote-box {
-  background-color: blanchedalmond;
+  background-color: whitesmoke;
   width: 500px;
-  height: 300px;
-  margin: 10rem auto;
+  height: fit-content;
+  margin: 0 auto;
   border-radius: 5px;
+  padding: 25px;
+}
+
+button {
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  float: right;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:visited {
+  border: none;
+}
+
+.text {
+  padding-bottom: 1rem;
+}
+
+#author {
+  padding-bottom: 5rem;
+}
+
+
+
+#tweet-quote {
+  float: left;
+  background-color: #1B91DA;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: .8rem;
+
 }
