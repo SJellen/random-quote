@@ -90,3 +90,23 @@ button:visited {
   font-weight: bold;
   padding: 2px;
 }
+
+
+@media only screen and (max-width: 425px) {
+  .App {
+    display: flex;
+  }
+  .quote-box {
+    transform: scale(.75);
+    
+  }
+
+  #author {
+    position: relative;
+    z-index: -99;
+  }
+
+  
+
+  
+}
