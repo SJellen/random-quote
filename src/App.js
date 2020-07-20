@@ -54,8 +54,8 @@ function App() {
   return (
     <div className="App  trans-color" style={{backgroundColor: currentColor}}>
               <blockquote className="quote-box" id="quote-box">
-                <p className="text" id="text" style={{color: currentColor}}>{items.en}</p>
-                <span className="author" id="author" style={{color: currentColor}}>-{items.author}</span>
+                <p className="text trans-color" id="text" style={{color: currentColor}}>{items.en}</p>
+                <span className="author trans-color" id="author" style={{color: currentColor}}>-{items.author}</span>
 
                 <a href={twitterUrl.href} target="_blank" rel="noopener noreferrer" id="tweet-quote">Tweet</a>
                 <button  id="new-quote" onClick={handleClick} style={{backgroundColor: currentColor}}>New Quote</button>

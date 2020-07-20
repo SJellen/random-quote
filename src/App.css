@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 .App {
   text-align: center;
   height: 100vh;
   width: 100vw;
   padding-top: 15%;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,body {
@@ -27,6 +31,7 @@ html,body {
   margin: 0 auto;
   border-radius: 5px;
   padding: 25px;
+  box-shadow: 2px 2px 2px black;
 }
 
 button {
@@ -47,17 +52,21 @@ button:visited {
 
 .text {
   padding-bottom: 1rem;
+  text-align: start;
+  font-weight: 500;
 }
 
 #author {
   padding-bottom: 5rem;
+  font-size: .95rem;
+  
 }
 
 
 
 #tweet-quote {
   float: left;
-  background-color: #1B91DA;
+  background-color: #1da1f2;
   color: whitesmoke;
   border: none;
   border-radius: 5px;
@@ -65,4 +74,19 @@ button:visited {
   text-decoration: none;
   font-size: .8rem;
 
+}
+
+
+.text::before {
+  content: open-quote;
+  font-weight: bold;
+  padding: 2px;
+
+
+}
+
+.text::after {
+  content: close-quote;
+  font-weight: bold;
+  padding: 2px;
 }
