@@ -15,33 +15,36 @@ function App() {
 
   
   useEffect(() => {
-   fetch("https://programming-quotes-api.herokuapp.com/quotes/random")
+   fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
    .then(res => res.json())
    .then(
        (result) => {
-           setItems(result)
+           setItems(result.data[0])
        }
    )
    .catch(error => console.log(error))
   }, [])
 
-
+  console.log(items.quoteAuthor, items.quoteText)
 
   function handleClick() {
     let color = colorList[Math.floor(Math.random() * colorList.length)]
     setColor(color)
-    fetch("https://programming-quotes-api.herokuapp.com/quotes/random")
+    fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
    .then(res => res.json())
    .then(
        (result) => {
-           setItems(result)    
+          
+           setItems(result.data[0])    
        }
    )
    .catch(error => console.log(error))
   }
 
-  let quote = items.en
-  let author = items.author
+  
+
+  let quote = items.quoteText
+  let author = items.quoteAuthor
 
   const twitterMax = 280
   const twitterUrl = new URL("https://twitter.com/intent/tweet")
@@ -54,8 +57,8 @@ function App() {
   return (
     <div className="App  trans-color" style={{backgroundColor: currentColor}}>
               <blockquote className="quote-box" id="quote-box">
-                <p className="text trans-color" id="text" style={{color: currentColor}}>{items.en}</p>
-                <span className="author trans-color" id="author" style={{color: currentColor}}>-{items.author}</span>
+                <p className="text trans-color" id="text" style={{color: currentColor}}>{quote}</p>
+                <span className="author trans-color" id="author" style={{color: currentColor}}>-{author}</span>
 
                 <a href={twitterUrl.href} target="_blank" rel="noopener noreferrer" id="tweet-quote">Tweet</a>
                 <button  id="new-quote" onClick={handleClick} style={{backgroundColor: currentColor}}>New Quote</button>
