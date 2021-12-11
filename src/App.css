@@ -21,9 +21,6 @@ html,body {
   transition-property: all;
 }
 
-
-
-
 .quote-box {
   background-color: whitesmoke;
   width: 500px;
@@ -62,8 +59,6 @@ button:visited {
   
 }
 
-
-
 #tweet-quote {
   float: left;
   background-color: #1da1f2;
@@ -76,13 +71,10 @@ button:visited {
 
 }
 
-
 .text::before {
   content: open-quote;
   font-weight: bold;
   padding: 2px;
-
-
 }
 
 .text::after {
@@ -91,22 +83,16 @@ button:visited {
   padding: 2px;
 }
 
-
 @media only screen and (max-width: 425px) {
   .App {
     display: flex;
   }
   .quote-box {
     transform: scale(.75);
-    
   }
 
   #author {
     position: relative;
     z-index: -99;
   }
-
-  
-
-  
 }
